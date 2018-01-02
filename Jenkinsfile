@@ -16,15 +16,13 @@ pipeline {
                 }
             }
         }
-		stage('cobrtr'){
+		stage('cobertura'){
 			steps{
-				bat 'mvn cobertura:cobertura -Dcobertura.report.format=xml'
+				bat 'mvn cobertura:cobertura'
 			}
-			post{
-				success {
-					step([$class: 'CoberturaPublisher', autoUpdateHealth: false, autoUpdateStability: false, coberturaReportFile: 'target/site/cobertura/*.xml', failUnhealthy: false, failUnstable: false, maxNumberOfBuilds: 0, onlyStable: false, sourceEncoding: 'ASCII', zoomCoverageChart: false])
-				}
-			}
+			   junit '**/nosetests.xml'
+            step([$class: 'CoberturaPublisher', autoUpdateHealth: false, autoUpdateStability: false, coberturaReportFile: '**/coverage.xml', failUnhealthy: false, failUnstable: false, maxNumberOfBuilds: 0, onlyStable: false, sourceEncoding: 'ASCII', zoomCoverageChart: false])
+        }
 		}
     }
 }
