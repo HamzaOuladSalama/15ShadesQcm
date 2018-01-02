@@ -33,6 +33,10 @@
 					}
 	}
 			}
-			
+			stage('package'){
+				steps{
+					bat 'mvn package'
+				}
+			}
 	    }
 	}
