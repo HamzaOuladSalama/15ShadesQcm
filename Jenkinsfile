@@ -10,12 +10,19 @@ pipeline {
             steps {
 				bat 'mvn install'
             }
+           
+        }
+        stage ('unit test') {
+            steps {
+				bat 'mvn install'
+            }
             post {
                 success {
                     junit 'target/surefire-reports/*.xml' 
                 }
             }
         }
+
 		stage('cobertura'){
 			steps{
 				bat 'mvn cobertura:cobertura'
