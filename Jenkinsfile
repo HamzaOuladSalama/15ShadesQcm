@@ -35,7 +35,7 @@ pipeline {
 		}
 		stage('paquetage(.war)')
 			steps {
-                sh 'make' 
+               
                 archiveArtifacts artifacts: '**/target/*.war', fingerprint: true 
             	}
     }
