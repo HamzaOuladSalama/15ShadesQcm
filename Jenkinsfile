@@ -48,6 +48,6 @@
 					bat 'mvn package'
 				}
 			}
-			
+
 	    }
 	}
