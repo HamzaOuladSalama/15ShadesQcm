@@ -19,7 +19,12 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
     </properties>
-   
+    <distributionManagement>
+   <snapshotRepository>
+      <id>deploymentRepo</id>
+      <url>http://localhost:8081/nexus/content/repositories/releases</url>
+   </snapshotRepository>
+</distributionManagement>
     <dependencies>
 
         <dependency>
