@@ -21,7 +21,7 @@
     </properties>
     <distributionManagement>
          <repository>
-         <id>nexus</id>
+         <id>localnexus</id>
          <url>http://localhost:8080/nexus/content/repositories/releases</url>
      </repository>
  
