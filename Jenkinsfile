@@ -47,9 +47,9 @@
 				steps{
 					bat 'mvn package'
 				}
-				
+
 			}
-			stage('im super gay'){}
+			
 			stage('deploy'){
 				 steps{
 			   		 nexusPublisher nexusInstanceId: 'localnexus',
