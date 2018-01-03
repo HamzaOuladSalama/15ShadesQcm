@@ -22,11 +22,11 @@
     <distributionManagement>
          <repository>
          <id>deploymentRepo</id>
-         <name>deployment</name>
+         
          <url>http://localhost:8080/nexus/content/repositories/releases</url>
      </repository>
    <snapshotRepository>
-      <id>nexus-snapshots</id>
+      <id>snapshots</id>
       <url>http://localhost:8081/nexus/content/repositories/snapshots</url>
    </snapshotRepository>
 </distributionManagement>
