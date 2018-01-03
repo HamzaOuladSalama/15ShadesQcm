@@ -50,8 +50,8 @@
 			}
 			stage('deploy'){
 				 steps{
-			    nexusPublisher nexusInstanceId: 'DeployInNexus',
-				    nexusRepositoryId: 'Nexus',
+			    nexusPublisher nexusInstanceId: 'Local Nexus',
+				    nexusRepositoryId: 'localnexus',
 				    packages: [[$class: 'MavenPackage',
 						mavenAssetList: [[classifier: '',
 								  extension: 'jar',
