@@ -33,10 +33,21 @@
 					}
 	}
 			}
+			stage ('generate documentation') {
+				steps {
+					bat 'mvn javadoc:javadoc'
+				}
+				post{
+					success{
+						step([$class: 'JavadocArchiver', javadocDir: 'target/site/apidocs', keepAll: false])
+					}
+				}
+			}
 			stage('package'){
 				steps{
 					bat 'mvn package'
 				}
 			}
+			
 	    }
 	}
