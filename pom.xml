@@ -22,9 +22,14 @@
     <distributionManagement>
          <repository>
          <id>localnexus</id>
+         <name>LocalNexus</name>
          <url>http://localhost:8080/nexus/content/repositories/releases</url>
      </repository>
- 
+   <snapshotRepository>
+      <id>nexus-snapshots</id>
+      <name>Snapshots</name>
+      <url>http://localhost:8081/nexus/content/repositories/snapshots</url>
+   </snapshotRepository>
 </distributionManagement>
     <dependencies>
 
