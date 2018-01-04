@@ -50,6 +50,7 @@
                         findbugs canComputeNew: false, defaultEncoding: '', excludePattern: '', healthy: '', includePattern: '', pattern: '**/findbugsXml.xml', unHealthy: ''
 
 }
+}
 			stage('package'){
 				steps{
 					bat 'mvn package'
