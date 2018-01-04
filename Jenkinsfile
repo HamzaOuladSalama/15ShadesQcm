@@ -14,7 +14,7 @@
 	        }
 	        stage ('unit test') {
 	            steps {
-					bat 'mvn compile'
+					bat 'mvn test'
 	            }
 	            post {
 	                success {
