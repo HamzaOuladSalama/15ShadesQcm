@@ -137,8 +137,27 @@
           <groupId>io.fabric8</groupId>
           <artifactId>docker-maven-plugin</artifactId>
           <version>0.22.1</version>
-          
-
+          <configuration>
+          	<images>
+          		<image>
+          			<name>test</name>
+          			<alias></alias>
+          			<build>
+          				<assembly>
+          					<mode>dir</mode>
+          					<basedir>${basedir}/target</basedir>
+          					<dockerFileDir>{basedir}/target</dockerFileDir>
+          				</assembly>
+          			</build>
+          			<run>
+          				<ports>
+          					<port>80:80</port>
+          					<port>443:443</port>
+          				</ports>
+          			</run>
+          		</image>
+          	</images>
+          </configuration>
 </plugin>
         </plugins>
     </build>
