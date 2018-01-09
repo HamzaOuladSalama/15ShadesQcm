@@ -146,7 +146,7 @@
           				<assembly>
           					<mode>dir</mode>
           					<basedir>${basedir}/target</basedir>
-          					<dockerFileDir>{basedir}/target</dockerFileDir>
+          					<dockerFileDir>${basedir}/target</dockerFileDir>
           				</assembly>
           			</build>
           			<run>
