@@ -133,6 +133,23 @@
       </execution>
    </executions>
 </plugin>
+<plugin>
+          <groupId>io.fabric8</groupId>
+          <artifactId>docker-maven-plugin</artifactId>
+          <version>0.22.1</version>
+          <configuration>
+          	<images>
+          		<image>
+          			<run>
+          				<ports>
+          					<port>80:80</port>
+          					
+          				</ports>
+          			</run>
+          		</image>
+          	</images>
+          </configuration>
+</plugin>
         </plugins>
     </build>
     <reporting>
